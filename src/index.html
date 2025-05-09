@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.getElementById("dark-mode-toggle");
+        if (toggleButton) {
+          toggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+          });
+        }
+      });
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+
+  <body
+    class="h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+  >
+    <!-- header begins here-->
+    <header
+      class="mt-4 navbar-section h-[9vh] flex items-center justify-between px-4 sm:w-[94%] w-full mx-auto border-2 border-orange-300 rounded-lg"
+    >
+      <div class="w-16 md:w-16 lg:w-16 sm:w-16">
+        <img
+          class="cursor-pointer w-full"
+          src="https://evvisolutions.com/assets/Evvi_new-CRc-dtpu.png"
+          alt="Evvi App"
+        />
+      </div>
+
+      <nav
+        class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center justify-center px-5 z-10"
+      >
+        <ul
+          class="flex md:flex-row flex-col md:items-center md:gap-[1px] gap-8 p-4 md:p-0"
+        >
+          <li>
+            <a
+              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 md:px-2 transition-all duration-300"
+              href="#"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 md:px-2 transition-all duration-300"
+              href="#"
+              >Solution</a
+            >
+          </li>
+          <li>
+            <a
+              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 transition-all duration-300"
+              href="#"
+              >Resource</a
+            >
+          </li>
+          <li>
+            <a
+              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 md:px-2 transition-all duration-300"
+              href="#"
+              >Developers</a
+            >
+          </li>
+          <li>
+            <a
+              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 md:px-2 transition-all duration-300"
+              href="#"
+              >Pricing</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center flex-wrap gap-4">
+        <button
+          class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+        >
+          Sign in
+        </button>
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          name="menu"
+          class="text-3xl cursor-pointer md:hidden"
+        ></ion-icon>
+      </div>
+    </header>
+    <!-- header ends here -->
+
+    <!-- Hero section (first section) starts here-->
+    <section class="container mx-auto mt-7">
+      <div
+        class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 mx-auto items-center justify-start p-10"
+      >
+        <!-- left section -->
+        <div
+          class="flex justify-start items-start flex-col gap-6 lg:ml-20 md:ml-5 md:mb-10 mb-10"
+        >
+          <div class="flex justify-start items-start flex-col gap-6">
+            <h2
+              class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-semibold"
+            >
+              Ready to Use Tailwind CSS Web Template.
+            </h2>
+
+            <h1
+              class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
+            >
+              Tailwind Template for
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300"
+              >
+                App & Software
+              </span>
+              Site.
+            </h1>
+
+            <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+              All-in-one Tailwind CSS site template for App and Software. Comes
+              with all essential components.
+            </p>
+
+            <div
+              class="flex lg:flex-row md:flex-row sm:flex-col gap-4 items-start sm:items-center"
+            >
+              <div>
+                <button
+                  class="text-md bg-black hover:bg-gray-900 transition h-[56px] py-3 px-6 text-white rounded-lg flex items-center gap-2 cursor-pointer"
+                >
+                  Download Now &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i class="fa-brands fa-apple text-xl"></i>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span
+                  ><i
+                    class="fa-regular fa-circle-play text-5xl sm:text-6xl cursor-pointer"
+                  ></i
+                ></span>
+                <p class="text-sm cursor-pointer">
+                  Watch Demo <br />See how it works
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right section  -->
+        <div class="flex justify-center">
+          <img
+            src="https://appline-tailwind.preview.uideck.com/images/hero-light.png"
+            alt="Hero"
+            class="h-full object-cover z-10"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- first section ends here -->
+
+    <!-- Second section starts here -->
+    <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
+      <div class="flex justify-center items-center text-center">
+        <h1 class="text-5xl font-bold">
+          Amazing features for to make <br />your work easier
+        </h1>
+      </div>
+      <br />
+      <div class="flex justify-center items-center">
+        <p class="text-center text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor eros. <br />
+          Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+        </p>
+      </div>
+    </div>
+    <!-- second section ends here -->
+
+    <!-- Third section -->
+    <div
+      class="container mx-auto grid lg:grid-cols-3 lg:grid-rows-2 md:grid-cols-2 md:grid-rows-3 sm:grid-cols-1 sm:grid-rows-6 shadow-2xl rounded-lg p-10 mt-7"
+    >
+      <!-- Box 1 -->
+      <div class="flex flex-col justify-center items-center">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+        >
+          <i class="fa-brands fa-app-store text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">
+          Crafted for App Landing
+        </h1>
+        <p class="text-center p-3 text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="flex flex-col justify-center items-center">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+        >
+          <i class="fa-solid fa-layer-group text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">
+          High-quality Design
+        </h1>
+        <p class="text-center p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+
+      <!-- Box 3  -->
+      <div class="flex flex-col justify-center items-center">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+        >
+          <i class="fa-solid fa-list text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">
+          All Essential Sections
+        </h1>
+        <p class="text-center p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="flex flex-col justify-center items-center p-10">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+        >
+          <i class="fa-solid fa-gauge-high text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">Speed Optimized</h1>
+        <p class="text-center p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+
+      <!-- Box 5 -->
+      <div class="flex flex-col justify-center items-center p-10">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+        >
+          <i class="fa-solid fa-tv text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">
+          Fully Customizable
+        </h1>
+        <p class="text-center p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+
+      <!-- Box 6 -->
+      <div class="flex flex-col justify-center items-center p-10">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+        >
+          <i class="fa-solid fa-retweet text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">Regular Updates</h1>
+        <p class="text-center p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+    </div>
+    <!-- third section ends here -->
+
+    <!-- fourth section -->
+    <section class="container mx-auto mt-15">
+      <div
+        class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 mx-auto items-center justify-start p-10"
+      >
+        <!-- left section -->
+        <div class="flex justify-center ml-10 mb-10">
+          <img
+            src="https://appline-tailwind.preview.uideck.com/images/about-1-light.png"
+            alt="Hero"
+            class="h-full object-cover z-10"
+          />
+        </div>
+
+        <div
+          class="flex justify-start items-start flex-col gap-6 p-2 pl-0 mr-10"
+        >
+          <p class="text-indigo-400 text-2xl font-semibold">
+            Track Audience Activities
+          </p>
+          <h1 class="text-5xl font-bold">Track Your Audience Activities</h1>
+          <h3 class="text-gray-500">
+            Schedule your posts for times when your audience is most active.
+            Choose from our best-time predictions, or create your own publishing
+            schedule.
+          </h3>
+
+          <p class="text-md flex items-start gap-3">
+            <span
+              class="w-14 h-14 rounded-full border-1 flex items-center justify-center font-bold text-xl"
+            >
+              1
+            </span>
+            <span>
+              <span class="text-2xl font-semibold">Lorem ipsum dolor.</span
+              ><br />
+              <span class="text-gray-600 text-sm"
+                >Ut ultricies lacus non fermentum ultrices.</span
+              >
+            </span>
+          </p>
+          <p class="text-md flex items-start gap-3">
+            <span
+              class="w-14 h-14 rounded-full border-1 flex items-center justify-center font-bold text-xl"
+            >
+              2
+            </span>
+            <span>
+              <span class="text-2xl font-semibold">Lorem ipsum dolor.</span
+              ><br />
+              <span class="text-gray-600 text-sm"
+                >Ut ultricies lacus non fermentum ultrices.</span
+              >
+            </span>
+          </p>
+
+          .
+        </div>
+      </div>
+    </section>
+    <!-- fourth section ends here -->
+
+    <!-- fifth section starts here -->
+    <section class="container mx-auto lg:mt-15">
+      <div
+        class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 mx-auto items-center justify-start p-10 lg:ml-30 md:ml-10"
+      >
+        <div
+          class="flex flex-col justify-center items-start gap-6 p-2 pl-0 mr-10 mb-10"
+        >
+          <p class="text-indigo-400 text-2xl font-semibold">
+            Create Audience Reports
+          </p>
+          <h1 class="text-5xl font-bold">Know More About Your Audience</h1>
+          <h3 class="text-gray-500">
+            Schedule your posts for times when your audience is most active.
+            Choose from our best-time predictions, or create your own publishing
+            schedule.
+          </h3>
+          <button class="bg-indigo-400 px-7 py-3 rounded-lg">Know More</button>
+        </div>
+
+        <!-- left section -->
+        <div class="flex justify-center mr-20">
+          <img
+            src="https://appline-tailwind.preview.uideck.com/images/about-2-light.png"
+            alt="Hero"
+            class="h-full object-cover z-10"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- fifth section ends here -->
+
+    <!-- sixth section -->
+    <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
+      <div class="flex justify-center items-center text-center">
+        <h1 class="text-5xl font-bold">How it Works?</h1>
+      </div>
+      <br />
+      <div class="flex justify-center items-center">
+        <p class="text-center text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor eros. Donec vitae<br />
+          tortor lacus. Phasellus aliquam ante in maximus.
+        </p>
+      </div>
+      <div></div>
+    </div>
+    <!-- sixth section ends here -->
+
+    <!-- seventh section -->
+    <div
+      class="container mx-auto grid lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-3 shadow-2xl rounded-lg p-10 mt-7"
+    >
+      <!-- Box 1  -->
+      <div class="flex flex-col justify-center items-center">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
+        >
+          <i class="fa-solid fa-download text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">
+          Crafted for App Landing
+        </h1>
+        <p class="text-center p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+
+      <div class="flex flex-col justify-center items-center">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
+        >
+          <i class="fa-solid fa-user text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">
+          Crafted for App Landing
+        </h1>
+        <p class="text-center p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+
+      <div class="flex flex-col justify-center items-center">
+        <div
+          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
+        >
+          <i class="fa-solid fa-heart-crack text-7xl p-6 hover:text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-semibold p-2 text-center">
+          Crafted for App Landing
+        </h1>
+        <p class="text-center p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor.
+        </p>
+      </div>
+    </div>
+    <!-- seventh section ends here -->
+
+    <!-- eighth section -->
+    <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
+      <div class="flex justify-center items-center text-center">
+        <h1 class="text-5xl font-bold">Choose Your Plan</h1>
+      </div>
+      <br />
+      <div class="flex justify-center items-center">
+        <p class="text-center text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor eros. <br />
+          Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+        </p>
+      </div>
+      <div class="flex justify-center items-center mt-5">
+        <div class="flex items-center justify-center mb-4 space-x-4">
+          <span id="monthly-label" class="text-gray-700 font-medium"
+            >Monthly</span
+          >
+
+          <!-- Toggle Switch -->
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              value=""
+              class="sr-only peer"
+              id="togglePlan"
+            />
+            <div
+              class="w-14 h-8 bg-gray-300 rounded-full peer peer-checked:bg-indigo-400 transition-colors duration-300"
+            ></div>
+            <div
+              class="absolute left-1 top-1 bg-white w-6 h-6 rounded-full peer-checked:translate-x-6 transform transition-transform duration-300"
+            ></div>
+          </label>
+
+          <span id="yearly-label" class="text-gray-700 font-medium"
+            >Yearly</span
+          >
+        </div>
+      </div>
+    </div>
+    <!-- eight section ends here -->
+
+    <!-- ninth section -->
+    <section class="bg-white dark:bg-gray-900 container mx-auto mt-3">
+      <div
+        class="space-y-8 grid lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 sm:gap-6 xl:gap-10 lg:space-y-0 lg:mx-30 md:mx-10"
+      >
+        <!-- Pricing Card -->
+        <div
+          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+        >
+          <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
+          <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            Best option for personal use & for your next project.
+          </p>
+          <div class="flex justify-center items-baseline my-8">
+            <span class="mr-2 text-5xl font-extrabold">$29</span>
+            <span class="text-gray-500 dark:text-gray-400">/month</span>
+          </div>
+          <!-- List -->
+          <ul role="list" class="mb-8 space-y-4 text-left">
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Individual configuration</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>No setup, or hidden fees</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Team size:
+                <span class="font-semibold">10 developers</span></span
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Premium support:
+                <span class="font-semibold">24 months</span></span
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Free updates:
+                <span class="font-semibold">24 months</span></span
+              >
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
+            >Get started</a
+          >
+        </div>
+        <!-- Pricing Card -->
+        <div
+          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+        >
+          <h3 class="mb-4 text-2xl font-semibold">Company</h3>
+          <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            Relevant for multiple users, extended & premium support.
+          </p>
+          <div class="flex justify-center items-baseline my-8">
+            <span class="mr-2 text-5xl font-extrabold">$99</span>
+            <span class="text-gray-500 dark:text-gray-400">/month</span>
+          </div>
+          <!-- List -->
+          <ul role="list" class="mb-8 space-y-4 text-left">
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Individual configuration</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>No setup, or hidden fees</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Team size:
+                <span class="font-semibold">10 developers</span></span
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Premium support:
+                <span class="font-semibold">24 months</span></span
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Free updates:
+                <span class="font-semibold">24 months</span></span
+              >
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
+            >Get started</a
+          >
+        </div>
+        <!-- Pricing Card -->
+        <div
+          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+        >
+          <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
+          <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            Best for large scale uses and extended redistribution rights.
+          </p>
+          <div class="flex justify-center items-baseline my-8">
+            <span class="mr-2 text-5xl font-extrabold">$499</span>
+            <span class="text-gray-500 dark:text-gray-400">/month</span>
+          </div>
+          <!-- List -->
+          <ul role="list" class="mb-8 space-y-4 text-left">
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Individual configuration</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>No setup, or hidden fees</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Team size:
+                <span class="font-semibold">100+ developers</span></span
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Premium support:
+                <span class="font-semibold">36 months</span></span
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <!-- Icon -->
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                >Free updates:
+                <span class="font-semibold">36 months</span></span
+              >
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
+            >Get started</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- tenth section -->
+    <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
+      <div class="flex justify-center items-center text-center">
+        <h1 class="text-5xl font-bold">What Client's Say</h1>
+      </div>
+      <br />
+      <div class="flex justify-center items-center">
+        <p class="text-center text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+          tortor eros. <br />
+          Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+        </p>
+      </div>
+    </div>
+
+    <!-- Elevnth section starts here -->
+    <div
+      class="container mx-auto mt-0 grid lg:grid-cols-2 lg:grid-rows-2 md:grid-cols-1 md:grid-rows-1 sm:grid-cols-1 sm:grid-rows-3 gap-20 p-10"
+    >
+      <!-- Box 1  -->
+      <div
+        class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
+      >
+        <p class="py-3 text-center">
+          Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
+          dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
+        </p>
+        <hr class="w-full border-gray-500" />
+
+        <div
+          class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
+        >
+          <div class="flex flex-row justify-center items-center py-3">
+            <img
+              src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
+              alt=""
+              class="rounded-full w-20 h-20"
+            />
+            <p class="ml-5">
+              <span class="text-2xl font-semibold">Musharof Chowdhury </span
+              ><br />Web Entrepreneur
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center md:pt-5">
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div
+        class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
+      >
+        <p class="py-3 text-center">
+          Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
+          dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
+        </p>
+        <hr class="w-full border-gray-500" />
+
+        <div
+          class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
+        >
+          <div class="flex flex-row justify-center items-center py-3">
+            <img
+              src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
+              alt=""
+              class="rounded-full w-20 h-20"
+            />
+            <p class="ml-5">
+              <span class="text-2xl font-semibold">Musharof Chowdhury </span
+              ><br />Web Entrepreneur
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center md:pt-5">
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- box-3 -->
+      <div
+        class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
+      >
+        <p class="py-3 text-center">
+          Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
+          dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
+        </p>
+        <hr class="w-full border-gray-500" />
+
+        <div
+          class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
+        >
+          <div class="flex flex-row justify-center items-center py-3">
+            <img
+              src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
+              alt=""
+              class="rounded-full w-20 h-20"
+            />
+            <p class="ml-5">
+              <span class="text-2xl font-semibold">Musharof Chowdhury </span
+              ><br />Web Entrepreneur
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center md:pt-5">
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- box 4  -->
+      <div
+        class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
+      >
+        <p class="py-3 text-center">
+          Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
+          dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
+        </p>
+        <hr class="w-full border-gray-500" />
+
+        <div
+          class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
+        >
+          <div class="flex flex-row justify-center items-center py-3">
+            <img
+              src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
+              alt=""
+              class="rounded-full w-20 h-20"
+            />
+            <p class="ml-5">
+              <span class="text-2xl font-semibold">Musharof Chowdhury </span
+              ><br />Web Entrepreneur
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center md:pt-5">
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 text-yellow-300 ms-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+            <svg
+              class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- eleventh section ends here -->
+
+    <!-- footer section -->
+    <footer class="mx-auto p-20 bg-gray-100 text-gray-500">
+      <div class="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 gap-10">
+        <div class="col-span-2">
+          <img
+            src="https://evvisolutions.com/assets/Evvi_new-CRc-dtpu.png"
+            alt=""
+            class="w-20 h-15"
+          />
+          <p class="mt-5">
+            This membership will help you plan and <br />execute a variety of
+            projects.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <ul>
+            <li class="font-semibold my-2 text-black">Home</li>
+            <li>Product</li>
+            <li>Pricing</li>
+            <li>Business</li>
+            <li>Enterprise</li>
+          </ul>
+        </div>
+        <div class="flex justify-center">
+          <ul>
+            <li class="font-semibold my-2 text-black">About Us</li>
+            <li>Careers</li>
+            <li>Leadership</li>
+            <li>Diversity</li>
+            <li>Enterprise</li>
+          </ul>
+        </div>
+        <div class="flex justify-center">
+          <ul>
+            <li class="font-semibold my-2 text-black">Resources</li>
+            <li>Andy Guide</li>
+            <li>Forum</li>
+            <li>Support</li>
+            <li>App Directory</li>
+          </ul>
+        </div>
+        <div class="flex justify-center">
+          <ul>
+            <li class="font-semibold my-2 text-black">Tutorial</li>
+            <li>10 LeaderShip Styles</li>
+            <li>Executive Summary Tips</li>
+            <li>Prevent Team Burnout</li>
+            <li>What are OKRs</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="grid grid-cols-3 grid-rows-1 bg-indigo-400 text-white p-5">
+      <div class="flex justify-center items-center">
+        <p>© 2023 Evvi Solutions. All rights reserved.</p>
+      </div>
+      <div class="flex justify-center spacexx-4 items-center">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+      </div>
+      <div class="flex gap-5 justify-center items-center">
+        <p>Terms of Service</p>
+        <p>Privacy Policy</p>
+      </div>
+    </div>
+
+    <button
+      id="scroll-to-top"
+      class="fixed bottom-10 right-10 bg-blue-500 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out"
+    >
+      <svg
+        class="w-6 h-6 hover:w-9 hover:h-9 translate-middle-x translate-middle-y ease-in-out duration-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        ></path>
+      </svg>
+    </button>
+
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[9%]");
+      }
+
+      document.getElementById("scroll-to-top").addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
