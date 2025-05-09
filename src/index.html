@@ -31,66 +31,93 @@
   >
     <!-- header begins here-->
     <header
-      class="mt-4 navbar-section h-[9vh] flex items-center justify-between px-4 sm:w-[94%] w-full mx-auto border-2 border-orange-300 rounded-lg"
+      class="mt-4 navbar-section h-[10vh] flex items-center justify-between px-4 sm:w-[94%] w-full mx-auto shadow-xl rounded-lg sm:mb-[10vh]"
     >
-      <div class="w-16 md:w-16 lg:w-16 sm:w-16">
+      <div class="w-20 h-20 flex items-center justify-center">
         <img
-          class="cursor-pointer w-full"
+          class="cursor-pointer w-full object-fit-contain"
           src="https://evvisolutions.com/assets/Evvi_new-CRc-dtpu.png"
           alt="Evvi App"
+          class="object-contain flex-none max-w-none"
         />
       </div>
 
       <nav
-        class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center justify-center px-5 z-10"
+        class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center justify-center px-5 z-10 md:z-100 bg-white dark:bg-[#101828] dark:justify-center"
       >
         <ul
-          class="flex md:flex-row flex-col md:items-center md:gap-[1px] gap-8 p-4 md:p-0"
+          class="flex md:flex-row flex-col items-center gap-8 md:gap-[1px] lg:gap-8 sm:gap-8 p-4 md:p-0 dark:w-full sm:w-full"
         >
           <li>
             <a
-              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 md:px-2 transition-all duration-300"
+              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
               href="#"
               >Products</a
             >
           </li>
           <li>
             <a
-              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 md:px-2 transition-all duration-300"
+              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
               href="#"
-              >Solution</a
+              >Products</a
             >
           </li>
           <li>
             <a
-              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 transition-all duration-300"
+              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
               href="#"
-              >Resource</a
+              >Products</a
             >
           </li>
           <li>
             <a
-              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 md:px-2 transition-all duration-300"
+              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
               href="#"
-              >Developers</a
+              >Products</a
             >
           </li>
           <li>
             <a
-              class="border-3 border-transparent hover:border-orange-300 rounded-xl px-4 py-3 md:px-2 transition-all duration-300"
+              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
               href="#"
-              >Pricing</a
+              >Products</a
             >
           </li>
         </ul>
       </nav>
 
       <div class="flex items-center flex-wrap gap-4">
-        <button
+        <!-- <button
           class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
         >
           Sign in
+        </button> -->
+        <button
+          type="button"
+          id="dark-mode-toggle"
+          class="hs-dark-mode-active:hidden block p-4 hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+          data-hs-theme-click-value="dark"
+        >
+          <span
+            class="group inline-flex shrink-0 justify-center items-center size-9"
+          >
+            <svg
+              class="shrink-0 size-6"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </span>
         </button>
+
         <ion-icon
           onclick="onToggleMenu(this)"
           name="menu"
@@ -101,7 +128,7 @@
     <!-- header ends here -->
 
     <!-- Hero section (first section) starts here-->
-    <section class="container mx-auto mt-7">
+    <section class="container not-even:mx-auto mt-7 delay-200">
       <div
         class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 mx-auto items-center justify-start p-10"
       >
@@ -128,17 +155,19 @@
               Site.
             </h1>
 
-            <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+            <p
+              class="text-base sm:text-lg text-gray-600 leading-relaxed dark:text-gray-100"
+            >
               All-in-one Tailwind CSS site template for App and Software. Comes
               with all essential components.
             </p>
 
             <div
-              class="flex lg:flex-row md:flex-row sm:flex-col gap-4 items-start sm:items-center"
+              class="flex flex-col lg:flex-row md:flex-row sm:flex-col gap-4 items-start sm:items-center"
             >
               <div>
                 <button
-                  class="text-md bg-black hover:bg-gray-900 transition h-[56px] py-3 px-6 text-white rounded-lg flex items-center gap-2 cursor-pointer"
+                  class="text-md bg-black dark:bg-white dark:text-black transition h-[56px] py-3 px-6 text-white rounded-lg flex items-center gap-2 cursor-pointer"
                 >
                   Download Now &nbsp;&nbsp;|&nbsp;&nbsp;
                   <i class="fa-brands fa-apple text-xl"></i>
@@ -314,7 +343,7 @@
             Track Audience Activities
           </p>
           <h1 class="text-5xl font-bold">Track Your Audience Activities</h1>
-          <h3 class="text-gray-500">
+          <h3 class="text-gray-500 dark:text-gray-100">
             Schedule your posts for times when your audience is most active.
             Choose from our best-time predictions, or create your own publishing
             schedule.
@@ -367,7 +396,7 @@
             Create Audience Reports
           </p>
           <h1 class="text-5xl font-bold">Know More About Your Audience</h1>
-          <h3 class="text-gray-500">
+          <h3 class="text-gray-500 dark:text-gray-100">
             Schedule your posts for times when your audience is most active.
             Choose from our best-time predictions, or create your own publishing
             schedule.
@@ -838,6 +867,14 @@
           >
         </div>
       </div>
+
+      <center>
+        <button
+          class="col-span-3 mt-7 bg-indigo-400 text-white px-6 py-4 text-xl rounded-lg dark:bg-white dark:text-black text-center"
+        >
+          Buy Now
+        </button>
+      </center>
     </section>
 
     <!-- tenth section -->
@@ -854,6 +891,7 @@
         </p>
       </div>
     </div>
+    <!-- tenth section ends here -->
 
     <!-- Elevnth section starts here -->
     <div
@@ -1201,14 +1239,131 @@
     </div>
     <!-- eleventh section ends here -->
 
+    <!-- twelfth section starts here -->
+    <div class="px-6 py-24 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-4xl font-semibold sm:text-5xl">Contact sales</h2>
+        <p class="mt-2 text-lg text-gray-600 dark:text-gray-100">
+          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+        </p>
+      </div>
+
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="mx-auto mt-16 max-w-xl sm:mt-20"
+        onsubmit="sendEmail(); this.reset(); return false;"
+      >
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <input
+            type="hidden"
+            name="access_key"
+            value="db046e06-623c-4bbb-ad44-336987372ff3"
+          />
+          <div>
+            <label
+              for="first-name"
+              class="block text-sm font-semibold text-gray-900"
+              >First name</label
+            >
+            <div class="mt-2">
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                class="w-full rounded-md border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                placeholder="Enter Your First Name"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="last-name"
+              class="block text-sm font-semibold text-gray-900"
+              >Last name</label
+            >
+            <div class="mt-2">
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                class="w-full rounded-md border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                placeholder="Enter Your Last Name"
+              />
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="email" class="block text-sm font-semibold text-gray-900"
+              >Email</label
+            >
+            <div class="mt-2">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="w-full rounded-md border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                placeholder="Enter Your Email"
+              />
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="phone" class="block text-sm font-semibold text-gray-900"
+              >Phone Number</label
+            >
+            <div class="mt-2">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                class="w-full rounded-md border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                placeholder="Enter Your Phone Number"
+              />
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label
+              for="message"
+              class="block text-sm font-semibold text-gray-900"
+              >Message</label
+            >
+            <div class="mt-2">
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                class="w-full rounded-md border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                placeholder="Write your message here..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <button
+            type="submit"
+            class="w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+          >
+            Let's talk
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- twelfth section ends here -->
+
     <!-- footer section -->
-    <footer class="mx-auto p-20 bg-gray-100 text-gray-500">
+    <footer
+      class="mx-auto p-20 bg-gray-100 text-gray-500 dark:bg-gray-900 dark:text-gray-400"
+    >
       <div class="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 gap-10">
         <div class="col-span-2">
           <img
             src="https://evvisolutions.com/assets/Evvi_new-CRc-dtpu.png"
             alt=""
-            class="w-20 h-15"
+            class="w-30 h-20 flex items-center justify-start object-contain flex-none max-w-none"
           />
           <p class="mt-5">
             This membership will help you plan and <br />execute a variety of
@@ -1217,7 +1372,7 @@
         </div>
         <div class="flex justify-center">
           <ul>
-            <li class="font-semibold my-2 text-black">Home</li>
+            <li class="font-semibold my-2 text-black dark:text-white">Home</li>
             <li>Product</li>
             <li>Pricing</li>
             <li>Business</li>
@@ -1226,7 +1381,9 @@
         </div>
         <div class="flex justify-center">
           <ul>
-            <li class="font-semibold my-2 text-black">About Us</li>
+            <li class="font-semibold my-2 text-black dark:text-white">
+              About Us
+            </li>
             <li>Careers</li>
             <li>Leadership</li>
             <li>Diversity</li>
@@ -1235,7 +1392,9 @@
         </div>
         <div class="flex justify-center">
           <ul>
-            <li class="font-semibold my-2 text-black">Resources</li>
+            <li class="font-semibold my-2 text-black dark:text-white">
+              Resources
+            </li>
             <li>Andy Guide</li>
             <li>Forum</li>
             <li>Support</li>
@@ -1244,7 +1403,9 @@
         </div>
         <div class="flex justify-center">
           <ul>
-            <li class="font-semibold my-2 text-black">Tutorial</li>
+            <li class="font-semibold my-2 text-black dark:text-white">
+              Tutorial
+            </li>
             <li>10 LeaderShip Styles</li>
             <li>Executive Summary Tips</li>
             <li>Prevent Team Burnout</li>
@@ -1253,23 +1414,29 @@
         </div>
       </div>
     </footer>
+    <!-- footer section ends here -->
 
-    <div class="grid grid-cols-3 grid-rows-1 bg-indigo-400 text-white p-5">
+    <!-- footer 2 -->
+    <div
+      class="grid grid-cols-1 grid-rows-3 gap-3 md:grid-cols-3 md:grid-rows-1 md:gap-0 bg-indigo-400 text-white p-5"
+    >
       <div class="flex justify-center items-center">
         <p>© 2023 Evvi Solutions. All rights reserved.</p>
       </div>
-      <div class="flex justify-center spacexx-4 items-center">
+      <div class="flex justify-center items-center gap-x-4">
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-linkedin-in"></i>
       </div>
-      <div class="flex gap-5 justify-center items-center">
+      <div class="flex gap-x-5 justify-center items-center">
         <p>Terms of Service</p>
         <p>Privacy Policy</p>
       </div>
     </div>
+    <!-- footer 2 ends here -->
 
+    <!-- Scroll up button -->
     <button
       id="scroll-to-top"
       class="fixed bottom-10 right-10 bg-blue-500 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out"
@@ -1289,19 +1456,62 @@
         ></path>
       </svg>
     </button>
+    <!-- Scroll up button ends here -->
 
     <script>
+      // Toggle menu
       const navLinks = document.querySelector(".nav-links");
       function onToggleMenu(e) {
         e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("top-[9%]");
+        navLinks.classList.toggle("top-[12vh]");
       }
 
+      // scroll to top button
       document.getElementById("scroll-to-top").addEventListener("click", () => {
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
+      });
+
+      // Form submission
+      const form = document.getElementById("form");
+      const result = document.getElementById("result");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait...";
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.innerHTML = "Form submitted successfully";
+            } else {
+              console.log(response);
+              result.innerHTML = json.message;
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+          })
+          .then(function () {
+            form.reset();
+            setTimeout(() => {
+              result.style.display = "none";
+            }, 3000);
+          });
       });
     </script>
   </body>
