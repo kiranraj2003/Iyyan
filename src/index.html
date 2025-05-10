@@ -13,6 +13,17 @@
       referrerpolicy="no-referrer"
     />
 
+    <style>
+      .custom-shadow {
+        box-shadow: 0 1px 1px #818cf8, 0 -1px 9px #818cf8, 1px 0 9px #818cf8,
+          -1px 0 9px #818cf8;
+      }
+      .hover-custom-shadow:hover {
+        box-shadow: 0 1px 1px #818cf8, 0 -1px 9px #818cf8, 1px 0 9px #818cf8,
+          -1px 0 9px #818cf8;
+      }
+    </style>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const toggleButton = document.getElementById("dark-mode-toggle");
@@ -30,105 +41,149 @@
     class="h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
   >
     <!-- header begins here-->
-    <header
-      class="mt-4 navbar-section h-[10vh] flex items-center justify-between px-4 sm:w-[94%] w-full mx-auto shadow-xl rounded-lg sm:mb-[10vh]"
+
+    <nav
+      class="fixed top-3 left-0 right-0 sm:w-[85%] mx-auto rounded-lg bg-white dark:bg-[#101828] dark:text-white custom-shadow z-50 text-lg py-3"
     >
-      <div class="w-20 h-20 flex items-center justify-center">
-        <img
-          class="cursor-pointer w-full object-fit-contain"
-          src="https://evvisolutions.com/assets/Evvi_new-CRc-dtpu.png"
-          alt="Evvi App"
-          class="object-contain flex-none max-w-none"
-        />
-      </div>
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 items-center h-14">
+          <!-- Left: Logo -->
+          <div class="flex items-center">
+            <img
+              src="https://evvisolutions.com/assets/Evvi_new-CRc-dtpu.png"
+              alt="Evvi App Logo"
+              class="h-10 sm:h-10 md:h-12 object-contain"
+            />
+          </div>
 
-      <nav
-        class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center justify-center px-5 z-10 md:z-100 bg-white dark:bg-[#101828] dark:justify-center"
-      >
-        <ul
-          class="flex md:flex-row flex-col items-center gap-8 md:gap-[1px] lg:gap-8 sm:gap-8 p-4 md:p-0 dark:w-full sm:w-full"
-        >
-          <li>
-            <a
-              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
-              href="#"
-              >Products</a
-            >
-          </li>
-          <li>
-            <a
-              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
-              href="#"
-              >Products</a
-            >
-          </li>
-          <li>
-            <a
-              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
-              href="#"
-              >Products</a
-            >
-          </li>
-          <li>
-            <a
-              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
-              href="#"
-              >Products</a
-            >
-          </li>
-          <li>
-            <a
-              class="border-1 border-transparent px-5 py-3 hover:scale-105 hover:translate-y-1 hover:shadow-md hover:shadow-indigo-500 rounded-xl text-xl transition-shadow duration-300"
-              href="#"
-              >Products</a
-            >
-          </li>
-        </ul>
-      </nav>
+          <!-- Center: Links (only on sm and up) -->
+          <div class="hidden sm:flex justify-center">
+            <a href="#" class="hover-custom-shadow">Home</a>
+            <a href="#" class="hover-custom-shadow">About</a>
+            <a href="#" class="hover-custom-shadow">Services </a>
+            <a href="#" class="hover-custom-shadow">features</a>
+            <a href="#" class="hover-custom-shadow">Contact</a>
+          </div>
 
-      <div class="flex items-center flex-wrap gap-4">
-        <!-- <button
-          class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+          <!-- Right: Contact + Hamburger -->
+          <div class="flex justify-end items-center space-x-4">
+            <!-- Contact Button (Always visible) -->
+            <button
+              type="button"
+              id="dark-mode-toggle"
+              class="p-2 hs-dark-mode-active:hidden block hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+              data-hs-theme-click-value="dark"
+            >
+              <span
+                class="group inline-flex shrink-0 justify-center items-center size-9"
+              >
+                <svg
+                  class="shrink-0 size-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+              </span>
+            </button>
+
+            <!-- Hamburger Icon (only on small screens) -->
+            <button
+              id="menu-toggle"
+              class="sm:hidden focus:outline-none hover-custom-shadow p-2 rounded dark:text-white"
+            >
+              <svg
+                id="menu-open-icon"
+                class="h-7 w-7 text-gray-800 dark:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+              <svg
+                id="menu-close-icon"
+                class="h-7 w-7 text-gray-800 hidden dark:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="sm:hidden hidden flex-col space-y-3 py-4 text-lg"
         >
-          Sign in
-        </button> -->
-        <button
-          type="button"
-          id="dark-mode-toggle"
-          class="hs-dark-mode-active:hidden block p-4 hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-          data-hs-theme-click-value="dark"
-        >
-          <span
-            class="group inline-flex shrink-0 justify-center items-center size-9"
+          <a
+            href="#"
+            class="block text-gray-700 dark:text-white hover-custom-shadow px-3 py-2 rounded transition duration-200"
+            >Home</a
           >
-            <svg
-              class="shrink-0 size-6"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-            </svg>
-          </span>
-        </button>
-
-        <ion-icon
-          onclick="onToggleMenu(this)"
-          name="menu"
-          class="text-3xl cursor-pointer md:hidden"
-        ></ion-icon>
+          <a
+            href="#"
+            class="block text-gray-700 dark:text-white hover-custom-shadow px-3 py-2 rounded transition duration-200"
+            >About</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 dark:text-white hover-custom-shadow px-3 py-2 rounded transition duration-200"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 dark:text-white hover-custom-shadow px-3 py-2 rounded transition duration-200"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 dark:text-white hover-custom-shadow px-3 py-2 rounded transition duration-200"
+            >Services</a
+          >
+        </div>
       </div>
-    </header>
+    </nav>
+
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const openIcon = document.getElementById("menu-open-icon");
+      const closeIcon = document.getElementById("menu-close-icon");
+
+      toggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        openIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+    </script>
+
     <!-- header ends here -->
 
     <!-- Hero section (first section) starts here-->
-    <section class="container not-even:mx-auto mt-7 delay-200">
+    <section class="container mx-auto w-[90%] delay-200 mt-[13vh]" id="home">
       <div
         class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 mx-auto items-center justify-start p-10"
       >
@@ -193,7 +248,7 @@
           <img
             src="https://appline-tailwind.preview.uideck.com/images/hero-light.png"
             alt="Hero"
-            class="h-full object-cover z-10"
+            class="h-full object-cover"
           />
         </div>
       </div>
@@ -225,7 +280,7 @@
       <!-- Box 1 -->
       <div class="flex flex-col justify-center items-center">
         <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+          class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
         >
           <i class="fa-brands fa-app-store text-7xl p-6 hover:text-white"></i>
         </div>
@@ -242,7 +297,7 @@
       <!-- Box 2 -->
       <div class="flex flex-col justify-center items-center">
         <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+          class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
         >
           <i class="fa-solid fa-layer-group text-7xl p-6 hover:text-white"></i>
         </div>
@@ -259,7 +314,7 @@
       <!-- Box 3  -->
       <div class="flex flex-col justify-center items-center">
         <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+          class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
         >
           <i class="fa-solid fa-list text-7xl p-6 hover:text-white"></i>
         </div>
@@ -276,7 +331,7 @@
       <!-- Box 4 -->
       <div class="flex flex-col justify-center items-center p-10">
         <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+          class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
         >
           <i class="fa-solid fa-gauge-high text-7xl p-6 hover:text-white"></i>
         </div>
@@ -291,7 +346,7 @@
       <!-- Box 5 -->
       <div class="flex flex-col justify-center items-center p-10">
         <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+          class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
         >
           <i class="fa-solid fa-tv text-7xl p-6 hover:text-white"></i>
         </div>
@@ -308,7 +363,7 @@
       <!-- Box 6 -->
       <div class="flex flex-col justify-center items-center p-10">
         <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
+          class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-lg"
         >
           <i class="fa-solid fa-retweet text-7xl p-6 hover:text-white"></i>
         </div>
@@ -332,7 +387,7 @@
           <img
             src="https://appline-tailwind.preview.uideck.com/images/about-1-light.png"
             alt="Hero"
-            class="h-full object-cover z-10"
+            class="h-full object-cover"
           />
         </div>
 
@@ -358,7 +413,7 @@
             <span>
               <span class="text-2xl font-semibold">Lorem ipsum dolor.</span
               ><br />
-              <span class="text-gray-600 text-sm"
+              <span class="text-gray-600 text-sm dark:text-gray-100"
                 >Ut ultricies lacus non fermentum ultrices.</span
               >
             </span>
@@ -372,7 +427,7 @@
             <span>
               <span class="text-2xl font-semibold">Lorem ipsum dolor.</span
               ><br />
-              <span class="text-gray-600 text-sm"
+              <span class="text-gray-600 text-sm dark:text-gray-100"
                 >Ut ultricies lacus non fermentum ultrices.</span
               >
             </span>
@@ -409,7 +464,7 @@
           <img
             src="https://appline-tailwind.preview.uideck.com/images/about-2-light.png"
             alt="Hero"
-            class="h-full object-cover z-10"
+            class="h-full object-cover"
           />
         </div>
       </div>
@@ -417,76 +472,76 @@
     <!-- fifth section ends here -->
 
     <!-- sixth section -->
-    <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
-      <div class="flex justify-center items-center text-center">
-        <h1 class="text-5xl font-bold">How it Works?</h1>
+    <section>
+      <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
+        <div class="flex justify-center items-center text-center">
+          <h1 class="text-5xl font-bold">How it Works?</h1>
+        </div>
+        <br />
+        <div class="flex justify-center items-center">
+          <p class="text-center text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+            convallis tortor eros. Donec vitae<br />
+            tortor lacus. Phasellus aliquam ante in maximus.
+          </p>
+        </div>
+        <div
+          class="container mx-auto grid lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-3 shadow-2xl rounded-lg p-10 mt-7"
+        >
+          <!-- Box 1  -->
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
+            >
+              <i class="fa-solid fa-download text-7xl p-6 hover:text-white"></i>
+            </div>
+
+            <h1 class="text-3xl font-semibold p-2 text-center">
+              Crafted for App Landing
+            </h1>
+            <p class="text-center p-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor.
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
+            >
+              <i class="fa-solid fa-user text-7xl p-6 hover:text-white"></i>
+            </div>
+
+            <h1 class="text-3xl font-semibold p-2 text-center">
+              Crafted for App Landing
+            </h1>
+            <p class="text-center p-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor.
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="bg-white dark:bg-indigo-400 hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
+            >
+              <i
+                class="fa-solid fa-heart-crack text-7xl p-6 hover:text-white"
+              ></i>
+            </div>
+
+            <h1 class="text-3xl font-semibold p-2 text-center">
+              Crafted for App Landing
+            </h1>
+            <p class="text-center p-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor.
+            </p>
+          </div>
+        </div>
       </div>
-      <br />
-      <div class="flex justify-center items-center">
-        <p class="text-center text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
-          tortor eros. Donec vitae<br />
-          tortor lacus. Phasellus aliquam ante in maximus.
-        </p>
-      </div>
-      <div></div>
-    </div>
+    </section>
     <!-- sixth section ends here -->
-
-    <!-- seventh section -->
-    <div
-      class="container mx-auto grid lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-3 shadow-2xl rounded-lg p-10 mt-7"
-    >
-      <!-- Box 1  -->
-      <div class="flex flex-col justify-center items-center">
-        <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
-        >
-          <i class="fa-solid fa-download text-7xl p-6 hover:text-white"></i>
-        </div>
-
-        <h1 class="text-3xl font-semibold p-2 text-center">
-          Crafted for App Landing
-        </h1>
-        <p class="text-center p-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
-          tortor.
-        </p>
-      </div>
-
-      <div class="flex flex-col justify-center items-center">
-        <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
-        >
-          <i class="fa-solid fa-user text-7xl p-6 hover:text-white"></i>
-        </div>
-
-        <h1 class="text-3xl font-semibold p-2 text-center">
-          Crafted for App Landing
-        </h1>
-        <p class="text-center p-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
-          tortor.
-        </p>
-      </div>
-
-      <div class="flex flex-col justify-center items-center">
-        <div
-          class="bg-white hover:bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 rounded-2xl"
-        >
-          <i class="fa-solid fa-heart-crack text-7xl p-6 hover:text-white"></i>
-        </div>
-
-        <h1 class="text-3xl font-semibold p-2 text-center">
-          Crafted for App Landing
-        </h1>
-        <p class="text-center p-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
-          tortor.
-        </p>
-      </div>
-    </div>
-    <!-- seventh section ends here -->
 
     <!-- eighth section -->
     <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
@@ -503,7 +558,9 @@
       </div>
       <div class="flex justify-center items-center mt-5">
         <div class="flex items-center justify-center mb-4 space-x-4">
-          <span id="monthly-label" class="text-gray-700 font-medium"
+          <span
+            id="monthly-label"
+            class="text-gray-700 font-medium dark:text-gray-100"
             >Monthly</span
           >
 
@@ -523,7 +580,9 @@
             ></div>
           </label>
 
-          <span id="yearly-label" class="text-gray-700 font-medium"
+          <span
+            id="yearly-label"
+            class="text-gray-700 font-medium dark:text-gray-100"
             >Yearly</span
           >
         </div>
@@ -876,370 +935,374 @@
         </button>
       </center>
     </section>
+    <!-- ninth section ends here -->
 
-    <!-- tenth section -->
-    <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
-      <div class="flex justify-center items-center text-center">
-        <h1 class="text-5xl font-bold">What Client's Say</h1>
+    <!--tenth section starts here -->
+    <section>
+      <!-- div1-->
+      <div class="container mt-7 flex flex-col mx-auto rounded-lg py-10">
+        <div class="flex justify-center items-center text-center">
+          <h1 class="text-5xl font-bold">What Client's Say</h1>
+        </div>
+        <br />
+        <div class="flex justify-center items-center">
+          <p class="text-center text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+            convallis tortor eros. <br />
+            Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+          </p>
+        </div>
       </div>
-      <br />
-      <div class="flex justify-center items-center">
-        <p class="text-center text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
-          tortor eros. <br />
-          Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
-        </p>
+
+      <!-- div 2 -->
+      <div
+        class="container mx-auto mt-0 grid lg:grid-cols-2 lg:grid-rows-2 md:grid-cols-1 md:grid-rows-1 sm:grid-cols-1 sm:grid-rows-3 gap-20 p-10"
+      >
+        <!-- Box 1  -->
+        <div
+          class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
+        >
+          <p class="py-3 text-center">
+            Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
+            dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
+          </p>
+          <hr class="w-full border-gray-500" />
+
+          <div
+            class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
+          >
+            <div class="flex flex-row justify-center items-center py-3">
+              <img
+                src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
+                alt=""
+                class="rounded-full w-20 h-20"
+              />
+              <p class="ml-5">
+                <span class="text-2xl font-semibold">Musharof Chowdhury </span
+                ><br />Web Entrepreneur
+              </p>
+            </div>
+
+            <div class="flex items-center justify-center md:pt-5">
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div
+          class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
+        >
+          <p class="py-3 text-center">
+            Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
+            dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
+          </p>
+          <hr class="w-full border-gray-500" />
+
+          <div
+            class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
+          >
+            <div class="flex flex-row justify-center items-center py-3">
+              <img
+                src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
+                alt=""
+                class="rounded-full w-20 h-20"
+              />
+              <p class="ml-5">
+                <span class="text-2xl font-semibold">Musharof Chowdhury </span
+                ><br />Web Entrepreneur
+              </p>
+            </div>
+
+            <div class="flex items-center justify-center md:pt-5">
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- box-3 -->
+        <div
+          class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
+        >
+          <p class="py-3 text-center">
+            Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
+            dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
+          </p>
+          <hr class="w-full border-gray-500" />
+
+          <div
+            class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
+          >
+            <div class="flex flex-row justify-center items-center py-3">
+              <img
+                src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
+                alt=""
+                class="rounded-full w-20 h-20"
+              />
+              <p class="ml-5">
+                <span class="text-2xl font-semibold">Musharof Chowdhury </span
+                ><br />Web Entrepreneur
+              </p>
+            </div>
+
+            <div class="flex items-center justify-center md:pt-5">
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- box 4  -->
+        <div
+          class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
+        >
+          <p class="py-3 text-center">
+            Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
+            dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
+          </p>
+          <hr class="w-full border-gray-500" />
+
+          <div
+            class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
+          >
+            <div class="flex flex-row justify-center items-center py-3">
+              <img
+                src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
+                alt=""
+                class="rounded-full w-20 h-20"
+              />
+              <p class="ml-5">
+                <span class="text-2xl font-semibold">Musharof Chowdhury </span
+                ><br />Web Entrepreneur
+              </p>
+            </div>
+
+            <div class="flex items-center justify-center md:pt-5">
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-yellow-300 ms-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
     <!-- tenth section ends here -->
 
-    <!-- Elevnth section starts here -->
-    <div
-      class="container mx-auto mt-0 grid lg:grid-cols-2 lg:grid-rows-2 md:grid-cols-1 md:grid-rows-1 sm:grid-cols-1 sm:grid-rows-3 gap-20 p-10"
-    >
-      <!-- Box 1  -->
-      <div
-        class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
-      >
-        <p class="py-3 text-center">
-          Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
-          dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
-        </p>
-        <hr class="w-full border-gray-500" />
-
-        <div
-          class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
-        >
-          <div class="flex flex-row justify-center items-center py-3">
-            <img
-              src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
-              alt=""
-              class="rounded-full w-20 h-20"
-            />
-            <p class="ml-5">
-              <span class="text-2xl font-semibold">Musharof Chowdhury </span
-              ><br />Web Entrepreneur
-            </p>
-          </div>
-
-          <div class="flex items-center justify-center md:pt-5">
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Box 2 -->
-      <div
-        class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
-      >
-        <p class="py-3 text-center">
-          Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
-          dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
-        </p>
-        <hr class="w-full border-gray-500" />
-
-        <div
-          class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
-        >
-          <div class="flex flex-row justify-center items-center py-3">
-            <img
-              src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
-              alt=""
-              class="rounded-full w-20 h-20"
-            />
-            <p class="ml-5">
-              <span class="text-2xl font-semibold">Musharof Chowdhury </span
-              ><br />Web Entrepreneur
-            </p>
-          </div>
-
-          <div class="flex items-center justify-center md:pt-5">
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- box-3 -->
-      <div
-        class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
-      >
-        <p class="py-3 text-center">
-          Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
-          dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
-        </p>
-        <hr class="w-full border-gray-500" />
-
-        <div
-          class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
-        >
-          <div class="flex flex-row justify-center items-center py-3">
-            <img
-              src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
-              alt=""
-              class="rounded-full w-20 h-20"
-            />
-            <p class="ml-5">
-              <span class="text-2xl font-semibold">Musharof Chowdhury </span
-              ><br />Web Entrepreneur
-            </p>
-          </div>
-
-          <div class="flex items-center justify-center md:pt-5">
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- box 4  -->
-      <div
-        class="flex flex-col justify-center items-center shadow-2xl p-10 rounded-lg"
-      >
-        <p class="py-3 text-center">
-          Lorem ipsum dolor sit amet, consect adipiscing elit. Pellentesque
-          dignissim nisi a odio laoreet luctus. Ut sed diam, quis bibendum ex.
-        </p>
-        <hr class="w-full border-gray-500" />
-
-        <div
-          class="flex flex-row space-x-30 flex-wrap md:justify-end md:items-center py-3"
-        >
-          <div class="flex flex-row justify-center items-center py-3">
-            <img
-              src="https://appline-tailwind.preview.uideck.com/images/author-1.png"
-              alt=""
-              class="rounded-full w-20 h-20"
-            />
-            <p class="ml-5">
-              <span class="text-2xl font-semibold">Musharof Chowdhury </span
-              ><br />Web Entrepreneur
-            </p>
-          </div>
-
-          <div class="flex items-center justify-center md:pt-5">
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-yellow-300 ms-1"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path
-                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- eleventh section ends here -->
-
-    <!-- twelfth section starts here -->
+    <!-- twelfth section starts here (contact form)-->
     <div class="px-6 py-24 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-4xl font-semibold sm:text-5xl">Contact sales</h2>
@@ -1249,28 +1312,22 @@
       </div>
 
       <form
-        action="https://api.web3forms.com/submit"
+        action="http://localhost:3000/api/send-email"
         method="POST"
         class="mx-auto mt-16 max-w-xl sm:mt-20"
-        onsubmit="sendEmail(); this.reset(); return false;"
       >
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          <input
-            type="hidden"
-            name="access_key"
-            value="db046e06-623c-4bbb-ad44-336987372ff3"
-          />
           <div>
             <label
-              for="first-name"
+              for="firstName"
               class="block text-sm font-semibold text-gray-900"
               >First name</label
             >
             <div class="mt-2">
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
+                name="firstName"
+                id="firstName"
                 class="w-full rounded-md border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"
                 placeholder="Enter Your First Name"
               />
@@ -1279,15 +1336,15 @@
 
           <div>
             <label
-              for="last-name"
+              for="lastName"
               class="block text-sm font-semibold text-gray-900"
               >Last name</label
             >
             <div class="mt-2">
               <input
                 type="text"
-                name="last-name"
-                id="last-name"
+                name="lastName"
+                id="lastName"
                 class="w-full rounded-md border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"
                 placeholder="Enter Your Last Name"
               />
@@ -1354,11 +1411,45 @@
     </div>
     <!-- twelfth section ends here -->
 
+    <script>
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = {
+          firstName: form.firstName.value,
+          lastName: form.lastName.value,
+          email: form.email.value,
+          phone: form.phone.value,
+          message: form.message.value,
+        };
+
+        fetch("/api/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.redirectUrl) {
+              window.location.href = data.redirectUrl; // redirect to homepage
+            } else {
+              alert("Something went wrong");
+            }
+          })
+          .catch((err) => console.log(err));
+      });
+    </script>
+
     <!-- footer section -->
     <footer
-      class="mx-auto p-20 bg-gray-100 text-gray-500 dark:bg-gray-900 dark:text-gray-400"
+      class="mx-auto bg-gray-100 text-gray-500 dark:bg-gray-900 dark:text-gray-400"
     >
-      <div class="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 gap-10">
+      <div
+        class="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 gap-10 p-20"
+      >
         <div class="col-span-2">
           <img
             src="https://evvisolutions.com/assets/Evvi_new-CRc-dtpu.png"
@@ -1413,28 +1504,26 @@
           </ul>
         </div>
       </div>
+
+      <div
+        class="grid grid-cols-1 grid-rows-3 gap-3 md:grid-cols-3 md:grid-rows-1 md:gap-0 bg-indigo-400 text-white p-5"
+      >
+        <div class="flex justify-center items-center">
+          <p>© 2023 Evvi Solutions. All rights reserved.</p>
+        </div>
+        <div class="flex justify-center items-center gap-x-4">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <div class="flex gap-x-5 justify-center items-center">
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
     </footer>
     <!-- footer section ends here -->
-
-    <!-- footer 2 -->
-    <div
-      class="grid grid-cols-1 grid-rows-3 gap-3 md:grid-cols-3 md:grid-rows-1 md:gap-0 bg-indigo-400 text-white p-5"
-    >
-      <div class="flex justify-center items-center">
-        <p>© 2023 Evvi Solutions. All rights reserved.</p>
-      </div>
-      <div class="flex justify-center items-center gap-x-4">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-linkedin-in"></i>
-      </div>
-      <div class="flex gap-x-5 justify-center items-center">
-        <p>Terms of Service</p>
-        <p>Privacy Policy</p>
-      </div>
-    </div>
-    <!-- footer 2 ends here -->
 
     <!-- Scroll up button -->
     <button
@@ -1463,55 +1552,16 @@
       const navLinks = document.querySelector(".nav-links");
       function onToggleMenu(e) {
         e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("top-[12vh]");
+        navLinks.classList.toggle("top-[11vh]");
       }
 
       // scroll to top button
+
       document.getElementById("scroll-to-top").addEventListener("click", () => {
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
-      });
-
-      // Form submission
-      const form = document.getElementById("form");
-      const result = document.getElementById("result");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-        result.innerHTML = "Please wait...";
-
-        fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: json,
-        })
-          .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-              result.innerHTML = "Form submitted successfully";
-            } else {
-              console.log(response);
-              result.innerHTML = json.message;
-            }
-          })
-          .catch((error) => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-          })
-          .then(function () {
-            form.reset();
-            setTimeout(() => {
-              result.style.display = "none";
-            }, 3000);
-          });
       });
     </script>
   </body>

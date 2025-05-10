@@ -1,3 +1,12 @@
 @import "tailwindcss";
 
+
+
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .hover-custom-shadow{
+ @apply px-4 py-2 rounded transition duration-200 hover:-translate-y-2 hover:scale-105  active:translate-y-1;
+  }
+}
+
